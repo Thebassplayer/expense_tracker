@@ -11,9 +11,10 @@
 </head>
 
 <body>
-  <h1>Expense Tracker</h1>
+
 
   <div class="container">
+    <h1 id="heading">Expense Tracker</h1>
     <h4>Your Balance</h4>
     <h2 id="balance">$0.00</h2>
 
@@ -32,6 +33,11 @@
     </ul>
     <h3>Add new transaction</h3>
     <form id="form">
+      <input type="radio" id="add-btn" name="add" value="+">
+      <label for="add">+</label>
+      <input type="radio" id="subs-btn" name="subs-btn" value="-">
+      <label for="subs-btn">-</label>
+
       <div class="form-control">
         <label for="detail">Detail</label>
         <input type="text" id="detail" placeholder="Enter detail">
