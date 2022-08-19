@@ -1,0 +1,29 @@
+{
+  "name": "expense_tracker",
+  "version": "1.0.0",
+  "description": "Track your expenses",
+  "main": "server.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thebassplayer/expenses_tracker.git"
+  },
+  "keywords": [
+    "expenses",
+    "income"
+  ],
+  "author": "Roy Lopez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Thebassplayer/expenses_tracker/issues"
+  },
+  "homepage": "https://github.com/Thebassplayer/expenses_tracker#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nedb": "^1.8.0",
+    "node-fetch": "^3.2.10",
+    "nodemon": "^2.0.19"
+  }
+}
