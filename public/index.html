@@ -18,8 +18,8 @@
     <h4>Your Balance</h4>
     <h2 id="balance">$0.00</h2>
 
-    <div class="inc-exp-container">
-      <div>
+    <div class="inc-exp-container border">
+      <div class="border">
         <h4>Income</h4>
         <p id="money-plus" class="money plus">+$0.00</p>
       </div>
@@ -33,18 +33,24 @@
     </ul>
     <h3>Add new transaction</h3>
     <form id="form">
-      <input type="radio" id="add-btn" name="add" value="+">
-      <label for="add">+</label>
-      <input type="radio" id="subs-btn" name="subs-btn" value="-">
-      <label for="subs-btn">-</label>
+      <div class="wrapper">
+        <input type="radio" name="select" id="option-1" checked>
+        <input type="radio" name="select" id="option-2">
+        <label for="option-1" class="option option-1">
+          <span>+</span>
+        </label>
+        <label for="option-2" class="option option-2">
+          <span>-</span>
+        </label>
+      </div>
 
       <div class="form-control">
         <label for="detail">Detail</label>
-        <input type="text" id="detail" placeholder="Enter detail">
+        <input type="text" id="detail" class="borde" placeholder="Enter detail - Ex: pizza! 🍕">
       </div>
       <div class="form-control">
-        <label for="amount">Amount<br>(negative - expense / positive + income)</label>
-        <input type="number" id="amount" placeholder="Enter amount...">
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" class="border positive" placeholder="Enter amount - Ex: 100 💸">
       </div>
       <button class="btn">ADD TRANSACTION</button>
     </form>
