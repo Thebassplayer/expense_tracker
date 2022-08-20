@@ -112,10 +112,14 @@ input[type='number'] {
 }
 
 .positive:focus {
+  outline: 3px;
+  outline-style: solid;
   outline-color: #2ecc71;
 }
 
 .negative:focus {
+  outline: 3px;
+  outline-style: solid;
   outline-color: #c0392b;
 }
 
@@ -172,7 +176,7 @@ input[type='number'] {
   background-color: #e74c3c;
   border: 0;
   color: #fff;
-  font-size: 20px;
+  font-size: 10px;
   padding: 3px 5px;
   position: absolute;
   top: 50%;

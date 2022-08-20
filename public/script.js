@@ -8,6 +8,8 @@ const balance = document.getElementById('balance'),
   detail = document.getElementById('detail'),
   amount = document.getElementById('amount');
 
+let ulEl, newTransaction;
+
 const localStorageTransactions = JSON.parse(
   localStorage.getItem('transactions')
 );
@@ -21,7 +23,7 @@ let positiveTransaction = true;
 function addTransaction(e) {
   e.preventDefault();
 
-  let signedAmount = Math.abs(amount.value);
+  let signedAmount = Math.abs(amount.value.trim());
 
   if (!positiveTransaction) {
     signedAmount = -Math.abs(amount.value);
@@ -30,7 +32,7 @@ function addTransaction(e) {
   if (detail.value.trim() === '' || amount.value.trim() === '') {
     alert('Please add detail and amount');
   } else {
-    const newTransaction = {
+    newTransaction = {
       id: generateID(),
       detail: detail.value,
       amount: signedAmount,
@@ -62,7 +64,21 @@ function addTransactionDOM(transaction) {
   //! Add class based on value
   item.classList.add(transaction.amount > 0 ? 'plus' : 'minus');
 
-  item.innerHTML = `${transaction.detail}<span>${sign}$ ${Math.abs(
+  //! Emojify
+
+  let printableDetail = transaction.detail,
+    transDet = transaction.detail.toLowerCase();
+  if (transDet === 'piza' || transDet === 'pizza' || transDet === 'picsa') {
+    printableDetail = `${printableDetail} 🍕`;
+  } else if (
+    transDet === 'burger' ||
+    transDet === 'hamburger' ||
+    transDet === 'hamburguesa'
+  ) {
+    printableDetail = `${printableDetail} 🍔`;
+  }
+
+  item.innerHTML = `${printableDetail}<span>${sign}$ ${Math.abs(
     transaction.amount
   ).toFixed(2)}</span> <button class="delete-btn" onclick="removeTransaction(${
     transaction.id
