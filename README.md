@@ -1,4 +1,4 @@
-# Expenses Traker
+# Expenses Traker 💸
 ### [Udemy proyect by Brad Traversy](https://github.com/bradtraversy/vanillawebprojects/tree/master/expense-tracker)
 
 
