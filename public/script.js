@@ -95,8 +95,6 @@ function updateValuesDOM() {
 
     const total = amountsArr.reduce((acc, item) => acc + item, 0).toFixed(2);
 
-    console.log('Total: ', total, typeof total);
-
     const income = amountsArr
       .filter((val) => val > 0)
       .reduce((acc, val) => acc + val, 0)
